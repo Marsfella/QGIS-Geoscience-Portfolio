@@ -1,8 +1,10 @@
 # Project 1: Permian Basin Oil & Gas Well Mapping
 
-## Objective
+## Why This Project
 
-Map and analyze the spatial distribution of oil and gas wells across the Texas Permian Basin, one of the most prolific hydrocarbon-producing regions in the world. The project classifies wells by type, operator, and target formation to reveal drilling patterns, activity hotspots, and operator footprints.
+The Permian Basin is the most actively drilled hydrocarbon province in the United States, and understanding well distribution patterns is fundamental to production geology, lease evaluation, and field development planning. I built this project because it mirrors the kind of spatial data work that comes up routinely in E&P roles: loading regulatory well data, classifying wells by type and status, identifying drilling trends by operator and formation, and producing maps that support subsurface decision-making.
+
+The choice to visualize by four different attributes (type, density, operator, formation) is deliberate. Each view answers a different question that a geoscientist or asset team might ask about a basin.
 
 ## Data
 
@@ -14,27 +16,27 @@ Map and analyze the spatial distribution of oil and gas wells across the Texas P
 
 Well attributes include: API number, well name, operator, well type (oil/gas/injection/dry hole/plugged), status, county, coordinates, total depth, target formation, spud date, basin, and elevation.
 
-**Data source:** Simulated dataset modeled on real Permian Basin geographic distributions and Texas Railroad Commission (RRC) data patterns. Real data can be downloaded from the [Texas RRC](https://www.rrc.texas.gov/resource-center/research/data-sets-available-for-download/) or [HIFLD Open Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/oil-and-natural-gas-wells/).
+**Data source:** Simulated dataset modeled on real Permian Basin geographic distributions and Texas Railroad Commission (RRC) data patterns. The well type ratios, operator mix, and formation targets are calibrated to reflect actual basin activity. Real data can be downloaded from the [Texas RRC](https://www.rrc.texas.gov/resource-center/research/data-sets-available-for-download/) or [HIFLD Open Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/oil-and-natural-gas-wells/).
 
 ## Maps
 
 ### Map 1: Well Distribution by Type
-Categorized point symbology classifying each well by production type. Oil wells (green circles), gas wells (red diamonds), oil and gas (orange triangles), injection (blue squares), dry holes (gray crosses), and plugged wells (olive X markers).
+The first question in any basin review is "what kind of wells are here?" This map uses categorized symbology with distinct shapes per type -- circles for oil, diamonds for gas, triangles for dual-completion, squares for injection, and cross markers for dry holes and plugged wells. The shape differentiation matters because color alone is insufficient when maps are printed in grayscale or viewed by colorblind reviewers.
 
 ![Map 1](maps/Map1_Well_Distribution_By_Type.png)
 
 ### Map 2: Well Density Heatmap
-Kernel density visualization highlighting areas of concentrated drilling activity. Midland-Ector county and Reeves County (Delaware Basin) emerge as primary hotspots, consistent with real-world Wolfcamp and Bone Spring development.
+Density mapping reveals what point scatter cannot: where drilling activity actually concentrates. The Midland-Ector corridor and Reeves County (Delaware Basin) stand out as primary hotspots, which aligns with the real-world focus on Wolfcamp and Bone Spring horizontal development in those areas. This kind of heatmap is useful for identifying infill drilling opportunities and lease competition.
 
 ![Map 2](maps/Map2_Well_Density_Heatmap.png)
 
 ### Map 3: Wells by Operator
-Spatial footprint of the top 6 operators by well count, showing how operators concentrate activity in specific geographic areas reflecting their leasehold positions.
+Operator footprints tell a story about leasehold strategy. The top 6 operators each show geographic clustering that reflects how acreage positions get built -- through acquisition, farmouts, and competitive leasing. In practice, this map helps answer "who are the active players in this area?" which is a question that comes up in joint venture discussions and competitive intelligence.
 
 ![Map 3](maps/Map3_Wells_By_Operator.png)
 
 ### Map 4: Wells by Target Formation
-Distribution of wells by primary geological target. Wolfcamp, Bone Spring, Spraberry, and San Andres formations dominate, with spatial clustering that reflects subsurface geology of the Midland and Delaware sub-basins.
+This is where subsurface geology meets the map. The Wolfcamp (A and B benches), Bone Spring, Spraberry, and San Andres formations each cluster in different geographic areas because the geology changes across the basin. The Wolfcamp dominates the Delaware sub-basin to the west, while the Spraberry and San Andres are more prominent in the Midland sub-basin. A geoscientist looking at this map can immediately connect surface location patterns to subsurface stratigraphy.
 
 ![Map 4](maps/Map4_Wells_By_Formation.png)
 

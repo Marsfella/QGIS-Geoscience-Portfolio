@@ -1,8 +1,10 @@
 # Project 3: Global Earthquake Seismic Hazard Visualization
 
-## Objective
+## Why This Project
 
-Visualize global seismic activity (2020-2025) to reveal spatial patterns in earthquake magnitude, depth, and frequency. The analysis demonstrates how earthquake distribution aligns with tectonic plate boundaries, with the Pacific Ring of Fire dominating as expected. Four distinct visualization approaches highlight different aspects of seismic hazard.
+Every geoscientist should be able to look at a map of global seismicity and explain what it means in terms of plate tectonics. This project goes beyond just plotting dots on a map. I wanted to show that by visualizing the same dataset four different ways -- by magnitude, depth, density, and time -- you can extract fundamentally different insights from identical data. That ability to reframe a dataset and ask different questions of it is, in my view, one of the most important skills a geoscientist can bring to a GIS role.
+
+The depth map in particular is a personal favorite. When you color-code earthquakes by depth, the Wadati-Benioff zones along subduction boundaries become immediately visible. Shallow events line up with divergent ridges and transform faults, while deep events (300+ km) trace the descending slabs in the western Pacific. That is plate tectonics made visible through data, and it is the kind of interpretive layer that separates a geoscientist's map from a generic data visualization.
 
 ## Data
 
@@ -14,27 +16,29 @@ Visualize global seismic activity (2020-2025) to reveal spatial patterns in eart
 
 **Magnitude distribution:** M4.0-4.9: 2,103 | M5.0-5.9: 556 | M6.0-6.9: 113 | M7.0+: 28
 
+The magnitude distribution follows the Gutenberg-Richter relationship, where each unit increase in magnitude corresponds to roughly a tenfold decrease in frequency. The dataset reflects this real-world scaling.
+
 **Data source:** Simulated dataset following Gutenberg-Richter magnitude distribution and real plate boundary geometry. For production use, download from [USGS Earthquake Catalog](https://earthquake.usgs.gov/earthquakes/search/), [tectonic plates GeoJSON](https://github.com/fraxen/tectonicplates), and [Natural Earth Data](https://www.naturalearthdata.com/downloads/).
 
 ## Maps
 
 ### Map 1: Earthquake Distribution by Magnitude
-Graduated symbol map where marker size and color scale with earthquake magnitude. The Ring of Fire, Alpine-Himalayan Belt, and Mid-Atlantic Ridge are clearly delineated by seismic activity.
+Graduated symbols where both size and color intensity increase with magnitude. The three major seismic belts -- Ring of Fire, Alpine-Himalayan, and Mid-Atlantic Ridge -- are immediately identifiable. The largest events (M7.0+) are rare but spatially concentrated along convergent boundaries, particularly in the western Pacific and South American subduction zones. This is the map you would show someone to explain why earthquake hazard is not uniformly distributed.
 
 ![Map 1](maps/Map1_Earthquake_Magnitude.png)
 
 ### Map 2: Earthquake Depth Distribution
-Depth-coded visualization using the plasma colormap. Shallow events (yellow) cluster along ridges and transform faults, while deep events (purple, 300+ km) trace subduction zones in the western Pacific, consistent with the Wadati-Benioff zone pattern.
+This is where the geoscience interpretation gets interesting. Shallow earthquakes (yellow, 0-70 km) occur everywhere there is active tectonics, but intermediate (70-300 km) and deep (300+ km) events are exclusive to subduction zones. The deep purple clusters beneath Japan, Tonga, and the Andes directly trace the geometry of descending oceanic lithosphere. If you know what you are looking at, this map is essentially a cross-sectional view of subduction compressed into plan view. I chose the plasma colormap specifically because its perceptual uniformity makes depth differences readable at a glance.
 
 ![Map 2](maps/Map2_Earthquake_Depth.png)
 
 ### Map 3: Seismic Density Heatmap
-Kernel density visualization on a dark background highlighting concentration zones. Japan, Indonesia, Chile/Peru, and the Aleutians emerge as the highest-density areas globally.
+The heatmap strips away individual events and shows aggregate concentration. Japan and Indonesia dominate because they sit at the intersection of multiple plate boundaries. The dark background is an intentional design choice -- it makes the hot colors pop and gives the map a visual weight that communicates hazard intuitively. This is the most "presentation-ready" of the four maps, and it is the one I would lead with in a briefing or poster session.
 
 ![Map 3](maps/Map3_Seismic_Heatmap.png)
 
 ### Map 4: Temporal Distribution by Year
-Year-coded scatter showing consistent seismic activity along plate boundaries from 2020 through 2025. Demonstrates that seismic hazard zones are persistent, not transient.
+Six years of data color-coded by year. The key insight is that seismic activity along plate boundaries is remarkably consistent from year to year. There are no "quiet years" along the Ring of Fire. This temporal persistence is what makes seismic hazard zones predictable in aggregate, even though individual earthquakes remain unpredictable. The map reinforces the point that hazard assessment is fundamentally a spatial problem, which is exactly what GIS is built to address.
 
 ![Map 4](maps/Map4_Temporal_Distribution.png)
 

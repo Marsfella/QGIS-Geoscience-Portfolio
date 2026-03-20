@@ -1,8 +1,10 @@
 # Project 2: EPA Superfund Environmental Risk Analysis
 
-## Objective
+## Why This Project
 
-Assess environmental risk exposure from EPA Superfund (NPL) contamination sites in New Jersey by combining spatial buffer analysis, water body proximity, and population density data into a composite county-level risk score. New Jersey was selected because it has the highest density of Superfund sites of any US state.
+Environmental site assessment is one of the most common applications of GIS in the geosciences, and it sits at the intersection of geology, public health, and regulatory compliance. I chose to focus on New Jersey because it has the highest density of National Priorities List (NPL) sites in the US -- over 100 active and former Superfund sites in a state smaller than most Texas counties. That density makes the spatial relationships between contamination, water, and population especially visible and analytically interesting.
+
+The core question driving this project: "Which communities face the greatest environmental exposure risk, and how do we quantify that spatially?" The answer requires layering multiple datasets -- site locations, buffer zones, hydrography, and demographics -- which is exactly the kind of multi-layer overlay analysis that environmental consultants and regulators do routinely.
 
 ## Data
 
@@ -21,22 +23,22 @@ Assess environmental risk exposure from EPA Superfund (NPL) contamination sites 
 ## Maps
 
 ### Map 1: Superfund Sites with Buffer Zones
-30 NPL sites plotted with 1-mile (red) and 3-mile (orange) buffer zones, overlaid on NJ county boundaries and major rivers. Site marker size is scaled by Hazard Ranking System (HRS) score. Active sites shown in dark red, deleted (remediated) sites in green.
+The buffer analysis is the foundation of environmental proximity assessment. The 1-mile buffer (red) represents the zone of highest potential groundwater and soil vapor intrusion risk, while the 3-mile buffer (orange) captures the broader area where contaminant plumes might migrate depending on hydrogeology. Marker size scales with the EPA Hazard Ranking System (HRS) score, so sites like Diamond Alkali (dioxin contamination along the Passaic River) stand out visually. The overlap of buffers in northeastern NJ tells its own story about cumulative exposure.
 
 ![Map 1](maps/Map1_Superfund_Buffer_Zones.png)
 
 ### Map 2: Population Density with Superfund Overlay
-Choropleth map of NJ county population density (people per square mile) with Superfund sites overlaid. Highlights that the most contaminated areas (northeastern NJ) overlap with the highest population densities, increasing exposure risk.
+This is where the human dimension enters the analysis. The choropleth reveals that the highest contamination concentrations (northeastern NJ around Hudson, Essex, and Bergen counties) overlap almost perfectly with the highest population densities, some exceeding 14,000 people per square mile. That overlap is not coincidental. These are historically industrial areas where decades of manufacturing left behind contaminated sites now surrounded by dense residential development.
 
 ![Map 2](maps/Map2_Population_Density_Overlay.png)
 
 ### Map 3: Environmental Risk Assessment
-Composite risk classification (High/Medium/Low) per county based on a weighted score combining: number of Superfund sites, population density, and proximity to water bodies. Hudson, Union, and Essex counties rank highest.
+The composite risk map synthesizes site count, population density, and water proximity into a single county-level classification. Hudson, Union, and Essex counties score highest, driven by the combination of multiple NPL sites and extreme population density. Southern NJ counties like Cumberland and Salem score lower, not because they lack contamination, but because lower population density reduces the exposure component. In a full production analysis, I would incorporate groundwater flow direction and aquifer vulnerability to refine these scores.
 
 ![Map 3](maps/Map3_Risk_Assessment.png)
 
 ### Map 4: Water Body Proximity Analysis
-Sites classified by distance to the nearest major river or stream. Sites within 3 miles of a water body (red) represent the highest groundwater/surface water contamination risk.
+Contamination near surface water is especially concerning because rivers and streams serve as both drinking water sources and contaminant transport pathways. Sites within 3 miles of a major waterway (red markers) represent the highest priority for remediation monitoring. Several sites along the Passaic and Delaware rivers fall into this category, which aligns with known real-world contamination issues in those watersheds.
 
 ![Map 4](maps/Map4_Water_Proximity.png)
 
@@ -45,12 +47,12 @@ Sites classified by distance to the nearest major river or stream. Sites within 
 The composite risk score per county is calculated as:
 
 ```
-Risk Score = (Superfund Site Count x 25) + (Pop Density / 500) + Random Noise
+Risk Score = (Superfund Site Count x 25) + (Pop Density / 500) + Noise Factor
 ```
 
 Classification thresholds: High (> 50), Medium (25-50), Low (< 25)
 
-In a production analysis, this would incorporate actual groundwater flow direction, soil permeability, contaminant transport models, and EPA remediation status data.
+This is a simplified screening-level approach. In a production environmental assessment, the scoring would incorporate groundwater flow direction, soil permeability, contaminant transport models, aquifer vulnerability indices, and EPA remediation status data. The point here is to demonstrate the GIS methodology, not to produce a regulatory-grade risk assessment.
 
 ## How to Reproduce in QGIS
 
