@@ -1,0 +1,22 @@
+county,superfund_sites,population,pop_density,risk_score,risk_level
+Hudson,3,724854,14893,112.4,High
+Union,3,575345,5537,93.0,High
+Somerset,3,345361,1126,84.7,High
+Gloucester,3,302294,919,78.3,High
+Cumberland,3,154152,312,77.4,High
+Middlesex,2,863162,2773,64.8,High
+Ocean,2,637229,1003,60.6,High
+Mercer,2,387340,1717,59.4,High
+Morris,2,509285,1088,58.3,High
+Monmouth,2,643615,1368,54.0,High
+Essex,1,863728,6603,42.2,Medium
+Bergen,1,955732,3919,35.4,Medium
+Passaic,1,524118,2741,34.0,Medium
+Hunterdon,1,128947,296,31.2,Medium
+Atlantic,1,274534,479,27.7,Medium
+Sussex,0,144221,275,8.5,Low
+Warren,0,109632,299,8.3,Low
+Camden,0,523485,2342,5.6,Low
+Burlington,0,461860,575,5.2,Low
+Cape May,0,95263,366,2.8,Low
+Salem,0,64837,192,1.8,Low

@@ -14,12 +14,22 @@ Categorized mapping and spatial analysis of 4,380 oil and gas wells across the T
 
 ---
 
-*Projects 2 and 3 (EPA Superfund Environmental Risk Analysis and USGS Earthquake Seismic Hazard Visualization) are in progress.*
+### [Project 2: EPA Superfund Environmental Risk Analysis](Project2_Superfund_Analysis/)
+
+Spatial risk assessment of 30 EPA Superfund (NPL) contamination sites in New Jersey using buffer analysis, water body proximity, and population density to produce a composite county-level risk score.
+
+**GIS techniques:** Buffer/proximity analysis, choropleth mapping, spatial overlay, point-in-polygon, composite risk scoring, multi-layer cartographic composition
+
+![Superfund Buffer Zones](Project2_Superfund_Analysis/maps/Map1_Superfund_Buffer_Zones.png)
+
+---
+
+*Project 3 (USGS Earthquake Seismic Hazard Visualization) is in progress.*
 
 ## Tools
 
-- QGIS 3.38 (Sketsketches and cartographic output)
-- Python 3 with matplotlib and geopandas (data processing and supplementary visualization)
+- QGIS 3.38 (spatial analysis and cartographic output)
+- Python 3 with matplotlib (data processing and visualization)
 - Data formats: GeoJSON, CSV, Shapefile
 
 ## Author
