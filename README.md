@@ -1,83 +1,32 @@
 # QGIS Geoscience & Environmental Portfolio
 
-A collection of GIS projects demonstrating spatial analysis skills across oil & gas, environmental science, and geohazard assessment domains. Built using QGIS with publicly available datasets.
+GIS projects demonstrating spatial analysis across oil and gas, environmental science, and geohazard domains. Built with QGIS 3.38 and Python, using publicly available datasets.
 
 ## Projects
 
-### Project 1: Permian Basin Oil & Gas Well Mapping
-Mapping and classification of oil and gas well locations in the Texas Permian Basin using Texas Railroad Commission data. Wells are classified by type (oil, gas, injection, dry hole) and overlaid on geological context layers.
+### [Project 1: Permian Basin Well Mapping](Project1_Well_Mapping/)
 
-**Skills:** Shapefile handling, CRS management, categorized symbology, attribute filtering, professional map composition
+Categorized mapping and spatial analysis of 4,380 oil and gas wells across the Texas Permian Basin. Wells are classified by type, operator, and target formation, with density analysis to identify drilling hotspots.
 
-**Data Sources:** Texas Railroad Commission, US Census TIGER/Line, USGS National Map
+**GIS techniques:** Categorized/graduated symbology, heatmap rendering, attribute-based filtering, CSV-to-point conversion, Print Layout composition
 
----
-
-### Project 2: EPA Superfund Site Environmental Risk Analysis
-Spatial risk assessment of EPA Superfund (NPL) contamination sites, incorporating buffer analysis, water body proximity, and population exposure mapping.
-
-**Skills:** Buffer/proximity analysis, spatial joins, multi-layer overlay analysis, demographic data integration, environmental risk assessment
-
-**Data Sources:** EPA/SEDAC Superfund Footprints, USGS National Hydrography Dataset, US Census Bureau
+![Well Distribution by Type](Project1_Well_Mapping/maps/Map1_Well_Distribution_By_Type.png)
 
 ---
 
-### Project 3: USGS Earthquake Seismic Hazard Visualization
-Global earthquake catalog visualization showing magnitude distribution, depth patterns, and seismic density using USGS data. Includes tectonic plate boundary context and multi-panel map layouts.
+*Projects 2 and 3 (EPA Superfund Environmental Risk Analysis and USGS Earthquake Seismic Hazard Visualization) are in progress.*
 
-**Skills:** CSV-to-spatial conversion, graduated/proportional symbols, heatmap analysis, multi-panel layouts, global-scale dataset handling
+## Tools
 
-**Data Sources:** USGS Earthquake Hazards Program, Natural Earth Data, Tectonic Plates (Hugo Ahlenius)
-
----
-
-## Repository Structure
-
-```
-QGIS_Portfolio/
-├── README.md
-├── QGIS_Portfolio_Project_Guide.md
-├── Project1_Well_Mapping/
-│   ├── data/          # Source shapefiles and rasters
-│   ├── output/        # Processed/derived data
-│   └── maps/          # Exported map images and PDFs
-├── Project2_Superfund_Analysis/
-│   ├── data/
-│   ├── output/
-│   └── maps/
-├── Project3_Earthquake_Viz/
-│   ├── data/
-│   ├── output/
-│   └── maps/
-└── Portfolio_Final/
-    └── maps/          # Final polished portfolio maps
-```
-
-## Tools & Software
-- **QGIS 3.x** (free, open-source GIS)
-- **Plugins:** QuickMapServices, DataPlotly
-- **Data formats:** Shapefile (.shp), GeoJSON, CSV, GeoTIFF
-
-## Data Sources
-
-All data used in these projects is publicly available:
-
-| Source | URL |
-|--------|-----|
-| Texas Railroad Commission | https://www.rrc.texas.gov/resource-center/research/data-sets-available-for-download/ |
-| US Census TIGER/Line | https://www.census.gov/geographies/mapping-files.html |
-| USGS National Map | https://www.usgs.gov/the-national-map-data-delivery/gis-data-download |
-| EPA Geospatial Data | https://www.epa.gov/frs/geospatial-data-download-service |
-| SEDAC Superfund Footprints | https://sedac.ciesin.columbia.edu/data/collection/superfund |
-| USGS Earthquake Catalog | https://earthquake.usgs.gov/earthquakes/search/ |
-| Natural Earth Data | https://www.naturalearthdata.com/downloads/ |
-| Tectonic Plates | https://github.com/fraxen/tectonicplates |
+- QGIS 3.38 (Sketsketches and cartographic output)
+- Python 3 with matplotlib and geopandas (data processing and supplementary visualization)
+- Data formats: GeoJSON, CSV, Shapefile
 
 ## Author
 
-**Israel Aina (Ayodeji Aina)**
-Production Geologist | Technical Data Management | GIS & Geospatial Analysis
+**Israel Aina**
+Production Geologist | Technical Data Management | Geospatial Analysis
 
 ## License
 
-This project is licensed under the MIT License. Data files are subject to their respective source licenses.
+MIT License. Data files are subject to their respective source licenses.

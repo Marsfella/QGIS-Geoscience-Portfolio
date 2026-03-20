@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[[-104.19999999999999, 30.5], [-104.19999999999999, 33.5], [-101.01, 33.5], [-101.01, 30.5], [-104.19999999999999, 30.5]]]}, "properties": {"NAME": "PERMIAN BASIN", "TYPE": "SEDIMENTARY BASIN"}}]}

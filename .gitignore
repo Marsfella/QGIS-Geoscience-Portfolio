@@ -1,33 +1,18 @@
-# QGIS temporary files
-*.qgz~
-*.qgs~
-*.pyc
-__pycache__/
-
-# Large data files (download separately, see README for sources)
-*.shp
-*.shx
-*.dbf
-*.prj
-*.cpg
-*.sbn
-*.sbx
-*.xml
-*.tif
-*.tfw
-*.gdb/
-*.gpkg
-
-# Keep exported maps and CSVs
-!maps/*.png
-!maps/*.pdf
-!maps/*.jpg
-!output/*.csv
-!output/*.geojson
-
 # OS files
 .DS_Store
 Thumbs.db
 
-# QGIS project lock files
+# QGIS temporary/lock files
+*.qgz~
+*.qgs~
 *.qlr
+*.pyc
+__pycache__/
+
+# Large binary GIS formats (not used in this repo, but excluded if added later)
+*.tif
+*.tfw
+*.gdb/
+*.gpkg
+*.sbn
+*.sbx
