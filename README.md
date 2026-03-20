@@ -24,7 +24,13 @@ Spatial risk assessment of 30 EPA Superfund (NPL) contamination sites in New Jer
 
 ---
 
-*Project 3 (USGS Earthquake Seismic Hazard Visualization) is in progress.*
+### [Project 3: Global Earthquake Seismic Hazard Visualization](Project3_Earthquake_Viz/)
+
+Global seismic activity visualization (2020-2025) showing 2,800 M4.0+ earthquakes with magnitude, depth, and density analysis overlaid on tectonic plate boundaries. The Ring of Fire, Alpine-Himalayan Belt, and Mid-Atlantic Ridge emerge clearly from the data.
+
+**GIS techniques:** Graduated/proportional symbols, heatmap density, depth classification, temporal visualization, global-scale data handling
+
+![Seismic Heatmap](Project3_Earthquake_Viz/maps/Map3_Seismic_Heatmap.png)
 
 ## Tools
 
